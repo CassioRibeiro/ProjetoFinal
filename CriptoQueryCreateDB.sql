@@ -24,7 +24,7 @@ GO
 
 SELECT * FROM DadosCriptomoeda
 
-    SELECT DISTINCT DC.Moeda,
+SELECT DISTINCT DC.Moeda,
        DC.DataInicial,
        DC.DataFinal,
        ROUND(DI.Fechamento, 3) AS ValorInicial,
