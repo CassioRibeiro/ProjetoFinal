@@ -23,3 +23,21 @@ WITH (
 GO
 
 SELECT * FROM DadosCriptomoeda
+
+    SELECT DISTINCT DC.Moeda,
+       DC.DataInicial,
+       DC.DataFinal,
+       ROUND(DI.Fechamento, 3) AS ValorInicial,
+       ROUND(DF.Fechamento, 3) AS ValorFinal,
+       CASE
+           WHEN DF.Fechamento > DI.Fechamento THEN 'Aumento'
+           WHEN DF.Fechamento < DI.Fechamento THEN 'Queda'
+           ELSE 'Estável'
+       END AS Tendencia
+FROM (
+    SELECT Moeda, MIN(Data) AS DataInicial, MAX(Data) AS DataFinal
+    FROM DadosCriptomoeda
+    GROUP BY Moeda
+) AS DC
+JOIN DadosCriptomoeda AS DI ON DI.Moeda = DC.Moeda AND DI.Data = DC.DataInicial
+JOIN DadosCriptomoeda AS DF ON DF.Moeda = DC.Moeda AND DF.Data = DC.DataFinal;
