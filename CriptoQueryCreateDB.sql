@@ -24,6 +24,9 @@ GO
 
 SELECT * FROM DadosCriptomoeda
 
+-- Como se comportaram os valores para todas as criptomoedas? Os valores tiveram
+uma tendência de queda ou de aumento?;
+
 SELECT DISTINCT DC.Moeda,
        DC.DataInicial,
        DC.DataFinal,
@@ -41,3 +44,8 @@ FROM (
 ) AS DC
 JOIN DadosCriptomoeda AS DI ON DI.Moeda = DC.Moeda AND DI.Data = DC.DataInicial
 JOIN DadosCriptomoeda AS DF ON DF.Moeda = DC.Moeda AND DF.Data = DC.DataFinal;
+
+-- Qual os valores médios para todas as criptomoedas?;
+SELECT Moeda, ROUND(AVG(Fechamento), 3) AS ValorMedio
+FROM DadosCriptomoeda
+GROUP BY Moeda;
