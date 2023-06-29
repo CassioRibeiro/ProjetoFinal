@@ -49,3 +49,61 @@ JOIN DadosCriptomoeda AS DF ON DF.Moeda = DC.Moeda AND DF.Data = DC.DataFinal;
 SELECT Moeda, ROUND(AVG(Fechamento), 3) AS ValorMedio
 FROM DadosCriptomoeda
 GROUP BY Moeda;
+
+-- 3. Em quais anos houve maiores quedas e valorizações?;
+SELECT
+    YEAR(Data) AS Ano,
+    CONCAT(CAST(MAX(((Fechamento - Abertura) / Abertura) * 100) AS DECIMAL(18, 2)), '%') AS MaiorValorizacao,
+    CONCAT(CAST(MIN(((Fechamento - Abertura) / Abertura) * 100) AS DECIMAL(18, 2)), '%') AS MaiorQueda
+FROM DadosCriptomoeda
+GROUP BY YEAR(Data)
+HAVING COUNT(DISTINCT Moeda) > 1
+ORDER BY Ano;
+
+-- 4. Existe alguma tendência de aumento ou queda dos valores pelo dia da semana?;
+
+SELECT
+    DATENAME(WEEKDAY, Data) AS DiaSemana,
+    CAST(AVG(Fechamento) AS DECIMAL(18, 2)) AS ValorMedio,
+    CAST(((MAX(Fechamento) - MIN(Fechamento)) / MIN(Fechamento)) * 100 AS VARCHAR(20)) + '%' AS Variacao
+FROM DadosCriptomoeda
+GROUP BY DATENAME(WEEKDAY, Data)
+ORDER BY DATENAME(WEEKDAY, Data);
+
+-- 5. Qual moeda se mostra mais interessante em relação à valorização pela análise da
+série histórica?;
+
+SELECT Moeda, (Fechamento_Final - Fechamento_Inicial) / Fechamento_Inicial * 100 AS Valorizacao
+FROM (
+    SELECT Moeda, 
+           MIN(Fechamento) AS Fechamento_Inicial, 
+           MAX(Fechamento) AS Fechamento_Final
+    FROM DadosCriptomoeda
+    GROUP BY Moeda
+) AS Subquery
+ORDER BY Valorizacao DESC;
+
+-- 6. Qual moeda se mostra menos interessante em relação à valorização pela análise da
+série histórica?;
+
+SELECT Moeda, (Fechamento_Final - Fechamento_Inicial) / Fechamento_Inicial * 100 AS Valorizacao
+FROM (
+    SELECT Moeda, 
+           MIN(Fechamento) AS Fechamento_Inicial, 
+           MAX(Fechamento) AS Fechamento_Final
+    FROM DadosCriptomoeda
+    GROUP BY Moeda
+) AS Subquery
+ORDER BY Valorizacao ASC;
+
+-- 7. Existe correlação entre os valores para todas as criptomoedas?
+
+SELECT
+    C1.Moeda AS Moeda1,
+    C2.Moeda AS Moeda2,
+    (SUM(C1.Fechamento * C2.Fechamento) - (SUM(C1.Fechamento) * SUM(C2.Fechamento)) / COUNT(*)) / 
+    (SQRT((SUM(C1.Fechamento * C1.Fechamento) - (SUM(C1.Fechamento) * SUM(C1.Fechamento)) / COUNT(*))) * 
+    SQRT((SUM(C2.Fechamento * C2.Fechamento) - (SUM(C2.Fechamento) * SUM(C2.Fechamento)) / COUNT(*)))) AS Correlacao
+FROM DadosCriptomoeda C1
+JOIN DadosCriptomoeda C2 ON C1.Moeda <> C2.Moeda
+GROUP BY C1.Moeda, C2.Moeda;
