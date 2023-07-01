@@ -1,4 +1,7 @@
--- Criar a tabela para armazenar os dados do CSV
+-- CRIAÇÃO DO BANCO DE DADOS
+--------------------------------------------------------------------------------------------------------------------
+
+-- Criando a tabela para armazenar os dados do CSV
 CREATE TABLE DadosCriptomoeda (
     Moeda NVARCHAR(100),
     Data DATE,
@@ -11,7 +14,7 @@ CREATE TABLE DadosCriptomoeda (
 );
 GO
 
--- Importar os dados do CSV para a tabela
+-- Importando os dados do CSV para a tabela
 BULK INSERT DadosCriptomoeda
 FROM 'C:\Users\Douglas Klem\Desktop\SENAC\SENAC-Resilia-FAD\Módulos\Módulo 5\Projeto em Grupo\Database\CriptoDB.csv'
 WITH (
@@ -22,11 +25,11 @@ WITH (
 );
 GO
 
-SELECT * FROM DadosCriptomoeda
+-- CONSULTAS AO BANCO DE DADOS
+--------------------------------------------------------------------------------------------------------------------
+SELECT * FROM DadosCriptomoeda -- visualização do database
 
--- Como se comportaram os valores para todas as criptomoedas? Os valores tiveram
-uma tendência de queda ou de aumento?;
-
+-- 1. Comportamento dos valores de todas as criptomoedas: houve tendência de queda ou de aumento?
 SELECT DISTINCT DC.Moeda,
        DC.DataInicial,
        DC.DataFinal,
@@ -45,12 +48,12 @@ FROM (
 JOIN DadosCriptomoeda AS DI ON DI.Moeda = DC.Moeda AND DI.Data = DC.DataInicial
 JOIN DadosCriptomoeda AS DF ON DF.Moeda = DC.Moeda AND DF.Data = DC.DataFinal;
 
--- Qual os valores médios para todas as criptomoedas?;
+-- 2. Valores médios para todas as criptomoedas
 SELECT Moeda, ROUND(AVG(Fechamento), 3) AS ValorMedio
 FROM DadosCriptomoeda
 GROUP BY Moeda;
 
--- 3. Em quais anos houve maiores quedas e valorizações?;
+-- 3. Anos com maiores quedas e valorizações
 SELECT
     YEAR(Data) AS Ano,
     CONCAT(CAST(MAX(((Fechamento - Abertura) / Abertura) * 100) AS DECIMAL(18, 2)), '%') AS MaiorValorizacao,
@@ -60,8 +63,7 @@ GROUP BY YEAR(Data)
 HAVING COUNT(DISTINCT Moeda) > 1
 ORDER BY Ano;
 
--- 4. Existe alguma tendência de aumento ou queda dos valores pelo dia da semana?;
-
+-- 4. Tendência de aumento ou queda dos valores pelo dia da semana
 SELECT
     DATENAME(WEEKDAY, Data) AS DiaSemana,
     CAST(AVG(Fechamento) AS DECIMAL(18, 2)) AS ValorMedio,
@@ -70,9 +72,7 @@ FROM DadosCriptomoeda
 GROUP BY DATENAME(WEEKDAY, Data)
 ORDER BY DATENAME(WEEKDAY, Data);
 
--- 5. Qual moeda se mostra mais interessante em relação à valorização pela análise da
-série histórica?;
-
+-- 5. Moedas que se mostraram mais e menos interessantes em relação à valorização pela análise da série histórica
 SELECT Moeda, (Fechamento_Final - Fechamento_Inicial) / Fechamento_Inicial * 100 AS Valorizacao
 FROM (
     SELECT Moeda, 
@@ -82,9 +82,6 @@ FROM (
     GROUP BY Moeda
 ) AS Subquery
 ORDER BY Valorizacao DESC;
-
--- 6. Qual moeda se mostra menos interessante em relação à valorização pela análise da
-série histórica?;
 
 SELECT Moeda, (Fechamento_Final - Fechamento_Inicial) / Fechamento_Inicial * 100 AS Valorizacao
 FROM (
@@ -96,8 +93,7 @@ FROM (
 ) AS Subquery
 ORDER BY Valorizacao ASC;
 
--- 7. Existe correlação entre os valores para todas as criptomoedas?
-
+-- 6. Correlação entre os valores para todas as criptomoedas
 SELECT
     C1.Moeda AS Moeda1,
     C2.Moeda AS Moeda2,
@@ -107,3 +103,5 @@ SELECT
 FROM DadosCriptomoeda C1
 JOIN DadosCriptomoeda C2 ON C1.Moeda <> C2.Moeda
 GROUP BY C1.Moeda, C2.Moeda;
+
+--------------------------------------------------------------------------------------------------------------------
