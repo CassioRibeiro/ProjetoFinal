@@ -1,6 +1,6 @@
 CREATE TABLE DadosQualitativos(
 
-	Moeda NVARCHAR(100),
+    Moeda NVARCHAR(100),
     Data DATE,
 
     
