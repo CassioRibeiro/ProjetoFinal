@@ -5,9 +5,7 @@ CREATE TABLE DadosQualitativos(
 
     
 );
-ALTER TABLE DadosQualitativos
-DROP COLUMN Abertura, Alta, Baixa, Fechamento, Volume, MarketCap;
-DROP TABLE DadosQualitativos
+
 
 BULK INSERT DadosQualitativos
 FROM 'C:\Users\diego\Downloads\CriptoDB.csv'
