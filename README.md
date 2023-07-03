@@ -31,6 +31,7 @@
 * **[M5] CriptoDBCreate2.sql**: montagem do banco de dados na forma relacional;
 * **[M5] CriptoDB_Backup.sql**: arquivo .bak do banco de dados não-relacional anterior;
 * **[M5] Presents.pdf**: slides de apoio à apresentação final do projeto;
+* **[M5] requirements.txt**: arquivo .txt informando quais bibliotecas foram usadas no projeto;
 * **README.md**: visão geral do projeto, documentando o contexto de análise, arquivos utilizados, ferramentas de trabalho envolvidas e equipe de desenvolvimento.
 
 ---
