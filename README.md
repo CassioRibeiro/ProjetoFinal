@@ -63,8 +63,7 @@
 </div>
 
 <div align="center">
-  <h4 style="display: inline-block; margin-right: 10px;">Ferramentas de Escritório</h4>
-  <img src="https://img.shields.io/badge/Microsoft_Office-D83B01?style=for-the-badge&logo=microsoft-office&logoColor=white" alt="Microsoft Office" style="vertical-align: middle;">
+  <h4 style="display: inline-block; margin-right: 10px;">Visualização de Dados</h4>
   <img src="https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white" alt="Microsoft Excel" style="vertical-align: middle;">
   <img src="https://img.shields.io/badge/power_bi-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" alt="Power BI" style="vertical-align: middle;">
 </div>
@@ -76,11 +75,13 @@
 
 <div align="center">
   <div>
-    <h4>Gestão de Projeto</h4>
-    <p align="center">
-      <img src="https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white" alt="Trello">
-    </p>
-  </div>
+     <h4>Gestão de Projeto</h4>
+  <p align="center">
+    <img src="https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white" alt="Trello">
+    <img src="https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white" alt="Discord">
+  </p>
+</div>
+  
   <div>
     <h4>Apresentação do Projeto</h4>
     <p align="center">
@@ -100,19 +101,19 @@
 
 <div align="center">
   <div>
-    <span>Cássio Ribeiro</span>
+    <h3>Cássio Ribeiro</h3>
     <a href="https://www.linkedin.com/in/cassiocpr/">
       <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
     </a>
-    <span>Diego Nieto</span>
+    <h3>Diego Nieto</h3>
     <a href="https://www.linkedin.com/in/diego-nieto-85749ab9/">
       <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
     </a>
-    <span>Douglas Klem</span>
+    <h3>Douglas Klem</h3>
     <a href="https://www.linkedin.com/in/klemdoug/">
       <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
     </a>
-    <span>Stephanie Vale</span>
+    <h3>Stephanie Vale</h3>
     <a href="https://www.linkedin.com/in/stephanie-ferreira1/">
       <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
     </a>
