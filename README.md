@@ -34,11 +34,91 @@
 * **README.md**: visão geral do projeto, documentando o contexto de análise, arquivos utilizados, ferramentas de trabalho envolvidas e equipe de desenvolvimento.
 
 ---
-<h1 align="center"> :busts_in_silhouette: Equipe :speech_balloon: </h1>
 
-* [Cássio Ribeiro](https://www.linkedin.com/in/pedrozacamilla/) :rocket: :white_flower:
-* [Diego Nieto](https://www.linkedin.com/in/danyele-fernandez/) :rocket: :cat:
-* [Douglas Klem](https://www.linkedin.com/in/klemdoug/) :bar_chart: :space_invader:
-* [Stephanie Vale](https://www.linkedin.com/in/jaidernunes/) :eyeglasses: :on:
+<h1 align="center"> :construction: Construção :wrench: </h1>
+
+<div align="center">
+  <h4 style="display: inline-block; margin-right: 10px;">Fóruns</h4>
+  <img src="https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white" alt="Kaggle" style="vertical-align: middle;">
+</div>
+
+<div align="center">
+  <h4 style="display: inline-block; margin-right: 10px;">Editores de Código/IDEs</h4>
+  <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python" style="vertical-align: middle;">
+  <img src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="Visual Studio Code" style="vertical-align: middle;">
+  <img src="https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter Notebook" style="vertical-align: middle;">
+</div>
+
+<div align="center">
+  <h4 style="display: inline-block; margin-right: 10px;">Bibliotecas</h4>
+  <img src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas" style="vertical-align: middle;">
+  <img src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy" style="vertical-align: middle;">
+  <img src="https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black" alt="Matplotlib" style="vertical-align: middle;">
+  <img src="https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="scikit-learn" style="vertical-align: middle;">
+</div>
+
+<div align="center">
+  <h4 style="display: inline-block; margin-right: 10px;">Banco de Dados</h4>
+  <img src="https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white" alt="Microsoft SQL Server" style="vertical-align: middle;">
+</div>
+
+<div align="center">
+  <h4 style="display: inline-block; margin-right: 10px;">Ferramentas de Escritório</h4>
+  <img src="https://img.shields.io/badge/Microsoft_Office-D83B01?style=for-the-badge&logo=microsoft-office&logoColor=white" alt="Microsoft Office" style="vertical-align: middle;">
+  <img src="https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white" alt="Microsoft Excel" style="vertical-align: middle;">
+  <img src="https://img.shields.io/badge/power_bi-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" alt="Power BI" style="vertical-align: middle;">
+</div>
+
+<div align="center">
+  <h4 style="display: inline-block; margin-right: 10px;">Design</h4>
+  <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" style="vertical-align: middle;">
+</div>
+
+<div align="center">
+  <div>
+    <h4>Gestão de Projeto</h4>
+    <p align="center">
+      <img src="https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white" alt="Trello">
+    </p>
+  </div>
+  <div>
+    <h4>Apresentação do Projeto</h4>
+    <p align="center">
+      <img src="https://img.shields.io/badge/Zoom-2D8CFF?style=for-the-badge&logo=zoom&logoColor=white" alt="Zoom">
+    </p>
+  </div>
+  <div>
+    <h4>Controle de Versão</h4>
+    <p align="center">
+      <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+    </p>
+  </div>
+</div>
 
 ---
+<h1 align="center"> :busts_in_silhouette: Equipe :speech_balloon: </h1>
+
+<div align="center">
+  <div>
+    <span>Cássio Ribeiro</span>
+    <a href="https://www.linkedin.com/in/cassiocpr/">
+      <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+    </a>
+    <span>Diego Nieto</span>
+    <a href="https://www.linkedin.com/in/diego-nieto-85749ab9/">
+      <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+    </a>
+    <span>Douglas Klem</span>
+    <a href="https://www.linkedin.com/in/klemdoug/">
+      <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+    </a>
+    <span>Stephanie Vale</span>
+    <a href="https://www.linkedin.com/in/stephanie-ferreira1/">
+      <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+    </a>
+  </div>
+</div>
+
+
+___
+
