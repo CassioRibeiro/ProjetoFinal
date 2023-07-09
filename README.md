@@ -26,11 +26,8 @@
 <h1 align="center"> :open_file_folder: Estruturação :paperclip: </h1>
 
 * **[M5] Notebook.ipynb**: arquivo para documentação do tratamento de dados prévio, análise exploratória inicial e registro de insights e referências bibliográficas;
-* **M5pbix**: pasta contendo a versão zipada e particionada do arquivo M5.pbix (M5.part1.rar e M5.part1.rar), contendo o conjunto de dashboards interativos que dão continuidade e centralizam a análise exploratória;
-* **[M5] CriptoDBCreate&Queries.sql**: montagem do banco de dados na forma não-relacional e códigos de consulta para verificação dos questionamentos pertinentes ao escopo do projeto;
-* **[M5] CriptoDBCreate2.sql**: montagem do banco de dados na forma relacional;
-* **[M5] CriptoDB_Backup.sql**: arquivo .bak do banco de dados não-relacional anterior;
-* **[M5] Presents.pdf**: slides de apoio à apresentação final do projeto;
+* **[M5]pbix**: pasta contendo a versão zipada e particionada do arquivo M5.pbix ([M5].part1.rar e [M5].part2.rar), contendo o conjunto de dashboards interativos que dão continuidade e centralizam a análise exploratória;
+* **[M5] CriptoDB.sql**: montagem do banco de dados relacional;
 * **[M5] requirements.txt**: arquivo .txt informando quais bibliotecas foram usadas no projeto;
 * **README.md**: visão geral do projeto, documentando o contexto de análise, arquivos utilizados, ferramentas de trabalho envolvidas e equipe de desenvolvimento.
 
